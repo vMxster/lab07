@@ -117,13 +117,6 @@ public final class Transformers {
      * @param <I> elements type
      */
     public static <I> List<I> reject(final Iterable<I> base, final Function<I, Boolean> test) {
-        //final var result = new ArrayList<I>();
-        //for (final I input : Objects.requireNonNull(base, "The base iterable cannot be null")) {
-        //    if (!test.call(input)) {
-        //        result.add(input);
-        //    }
-        //}
-        //return result;
         return select(base, new Function<I,Boolean>() {
             @Override
             public Boolean call(I input) {
